@@ -1,0 +1,16 @@
+#How to access SQL using Python
+
+#DB-API
+
+#Create Connection
+Connection = Connect('database_name', 'username', 'password');
+
+#Create a Cursor object
+Cursor = Connection.Cursor()
+
+#Run Queries
+Cursor.execute('select * from myTable')
+Results = Cursor.fetchall()
+
+Cursor.close()
+Connection.close()
